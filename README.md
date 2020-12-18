@@ -1,4 +1,4 @@
-# wordpress_emalls_api https://emalls.ir/
+# WordPress Emalls.ir API
 
 1 - open emalls_ir.php file
 
