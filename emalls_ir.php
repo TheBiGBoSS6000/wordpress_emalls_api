@@ -1,17 +1,17 @@
 <?php
 
-add_action( 'rest_api_init', 'add_custom_users_api');
+add_action( 'rest_api_init', 'add_emalls_api');
 
-function add_custom_users_api(){
+function add_emalls_api(){
     
     register_rest_route( 'site/api/v1', '/plugins/emalls/products', array(
         'methods' => WP_REST_Server::READABLE,
-        'callback' => 'get_custom_users_data',
+        'callback' => 'get_emalls_data',
     ));
     
 }
 
-function get_custom_users_data(){
+function get_emalls_data(){
     
     if( !isset($_GET['page']) || !is_numeric($_GET['page'])
         || !isset($_GET['size']) || !is_numeric($_GET['size']) ) {
